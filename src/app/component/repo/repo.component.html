@@ -1,0 +1,22 @@
+<div class="row py-1">
+  <div class="col-lg-12">
+    <div class="card p-3">
+      <div class="row mb-3">
+        <div class="col-lg-2">
+          <img [src]="repo.owner" width="140" />
+        </div>
+        <div class="col-lg-8 ml-4">
+          <h2>{{ repo.name }}</h2>
+          <span class="text-black-50">{{ repo.description }}</span>
+          <div class="d-flex justify-content-between install mt-3">
+            <span>{{ repo.nbreStars }} Stars</span>
+            <span>{{ repo.nbreIssues }} Issues</span>
+            <span class="text-primary">
+              View&nbsp;<i class="fa fa-angle-right"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
