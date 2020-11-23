@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable, Subscription } from 'rxjs';
-import { RepoService } from 'src/app/api/repo.service';
+import { RepoService } from 'src/app/services/repo.service';
 import { Repo } from 'src/app/models/repo.model';
 
 @Component({
@@ -11,6 +11,7 @@ import { Repo } from 'src/app/models/repo.model';
 })
 export class RepoListComponent implements OnInit {
   public repos: Repo[] = [];
+  private repoSub: Subscription;
 
   private pageIndex: number = 0;
 
@@ -28,7 +29,7 @@ export class RepoListComponent implements OnInit {
   }
 
   private fetchRepoPage(page: number = 0): void {
-    this.repoService.repos$.subscribe(
+    this.repoSub = this.repoService.repos$.subscribe(
       (repos) => {
         this.repos = this.repos.concat(repos);
         this.loaded = true;
@@ -47,7 +48,7 @@ export class RepoListComponent implements OnInit {
     this.fetchRepoPage(this.pageIndex);
   }
 
-  showSpinner() {
+  private showSpinner() {
     if (!this.loaded) {
       this.spinner.show();
     }

@@ -7,13 +7,12 @@
         </div>
         <div class="col-lg-8 ml-4">
           <h2>{{ repo.name }}</h2>
-          <span class="text-black-50">{{ repo.description }}</span>
+          <p class="text-black-50">{{ repo.description }}</p>
+
           <div class="d-flex justify-content-between install mt-3">
             <span>{{ repo.nbreStars }} Stars</span>
             <span>{{ repo.nbreIssues }} Issues</span>
-            <span class="text-primary">
-              View&nbsp;<i class="fa fa-angle-right"></i>
-            </span>
+            <p class="text-black-50">created at {{ repo.createdAt | date }}</p>
           </div>
         </div>
       </div>

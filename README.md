@@ -1,27 +1,88 @@
-# Repostar
+# **Tranding Repos**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.6.
+Tranding Repos is a small webapp to list the most starred Github repos that were created in the last 30 days.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# **Table of Contents**
 
-## Code scaffolding
+- [Software Libraries Used](##Software-Libraries-Used)
+- [Setup](##Setup)
+- [Running](##Running)
+- [Installation](##Installation)
+- [Documentation](##Documentation)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## **Software Libraries Used**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+This project is created with:
 
-## Running unit tests
+- Angular Cli: 10.1.6
+- Ngx Infinite Scroll: 10.0.0
+- Ngx Spinner: 10.0.1
+- Bootstrap: 4.5.3
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+This project is created with [Angular 10](https://github.com/angular).
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## **Setup**
 
-## Further help
+You need to have Node and NPM installed on your PC.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[Downloading and installing Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+---
+
+## **Installation**
+
+After installing node, you need to download the source code using git or else download and unzip the zip file.
+
+After open a terminal window and go to the project root folder, you need to install the project's packages using the following command:
+
+```bash
+    npm install
+```
+
+---
+
+## **Running**
+
+Run the following command:
+
+```bash
+    npm run start
+```
+
+Navigate to http://localhost:4200/.
+
+The browser will automatically reload if you change any of the source files.
+
+---
+
+## **Documentation**
+
+- Angular Cli:
+
+Angular Cli is used to generate the project.
+
+[for more informations. ](https://cli.angular.io/)
+
+- Ngx Infinite Scroll:
+
+Ngx Infinite Scroll is used to implement the infinite scrolling to our app.
+
+[for more informations. ](https://www.npmjs.com/package/ngx-infinite-scroll)
+
+- Ngx Spinner:
+
+we use this library to implement the loading component.
+
+[for more informations. ](https://www.npmjs.com/package/ngx-spinner)
+
+- Bootstrap:
+
+we use bootstrap to create a responsive webapp.
+
+[for more informations. ](https://getbootstrap.com/)

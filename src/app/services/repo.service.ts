@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 })
 export class RepoService {
   private repos: Repo[];
-  public repos$ = new Subject<any[]>();
+  public repos$ = new Subject<Repo[]>();
   private data;
 
   constructor(private http: HttpClient) {}
@@ -18,7 +18,7 @@ export class RepoService {
   }
 
   getAllRepos(page: number = 1) {
-    var date = new Date();
+    let date = new Date();
     date.setDate(date.getDate() - 30);
     this.http
       .get(
@@ -37,12 +37,13 @@ export class RepoService {
                 nbreStars: rp.stargazers_count,
                 nbreIssues: rp.open_issues_count,
                 owner: rp.owner.avatar_url,
+                createdAt: rp.created_at,
               };
             });
             this.emitRepos();
           }
         },
-        (error) => console.log('Could not load repos.')
+        (error) => console.log(error)
       );
   }
 }
